@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CheyJey Fashion </title>
+    <meta name="author" content="Oswaldo Fabrizio Ascencio De Los Santos">
+    <meta name="description" content="A small demo version of the East Harlem based CheyJey Fashion business.">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/217b2b6fbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1> CheyJey Fashion Prototype </h1>
+
+    <!--- New template -->
+    <div class="product-section">
+        <div class="product-section__filters">
+            <button type="button" class="product-section__filters__btn"> T-Shirts </button>
+            <button type="button" class="product-section__filters__btn"> Hoodies </button>
+            <button type="button" class="product-section__filters__btn"> Pants </button>
+            <button type="button" class="product-section__filters__btn"> Hats </button>
+            <button type="button" class="product-section__filters__btn"> Sweatshirts </button>
+        </div>
+
+        <div class="product-section__list" id="products">
+            <article class="product-section__list__item" data-price = "1.00" data-type = "shirt">
+                <img src="https://cataas.com/cat" alt="">
+
+                <header>
+                    <h2> Product title </h2>
+                    <h2> $404.404 </h2>
+                </header>
+
+                <footer>
+                    <h2> Product caption</h2>
+                </footer>
+
+                <button class="product-section__list__item__btn" type="button"> Add to cart <i class="fas fa-plus"></i> </button>
+            </article>
+        </div>
+
+        <div class="product-section__pagination"></div>
+    </div>
+
+    <!--- Old template -->
+    <div class="product-section">
+
+        <article class="card"> <!--
+            <header>
+                <h2> Card template header </h2>
+            </header>
+    
+            <img src="https://cataas.com/cat" alt="Cat">
+    
+            <div class="content">
+                <p> Lorem ipsum dolor sit amet.
+                    Nisi consectetur odit voluptate dolorum.
+                    Quo dignissimos laboriosam accusamus ea?
+                </p>
+                <p> Price: $50.00 </p>
+            </div>
+    
+            <footer>
+                Card template footer
+            </footer> -->
+        </article>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__content__section">
+                <p> Layout prototype </p>
+            </div>
+            <div class="footer__content__section">
+                <ul class="footer__content__section__navigation">
+                    <li> <a href="about.html"> About </a> </li>
+                    <li> <a href="about.html"> Home </a> </li>
+                    <li> <a href="about.html"> Contact </a> </li>
+                </ul>
+            </div>
+            <div class="footer__content__section">
+                <p> Designed & Built by OFDLSA</p>
+                <p> CheyJey Fashion © 2025 </p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+/** 
+ * Developer: Oswaldo Fabrizio De Los Santos Ascencio
+ * EMPLID: 24232142
+ * File name: style.scss
+ * The main styling for the website is written below and compiled into style.css automatically using sass 
+ */
+:root {
+  --primary-font: Verdana, Geneva, Tahoma, sans-serif;
+  --secondary-font: sans-serif;
+  --title-font: rockbilly;
+  --primary-color: white;
+  --secondary-color: black;
+}
+
+@font-face {
+  font-family: rockbilly;
+  src: url("resources/fonts/Rockybilly.ttf");
+}
+.startup-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden !important;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.startup-screen__image {
+  position: absolute;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%), url(street.jpg);
+  width: 100%;
+  height: 100%;
+  opacity: 10%;
+}
+.startup-screen__header {
+  font-family: var(--title-font);
+  font-size: 28px;
+  margin: 50px 0;
+}
+.startup-screen__subheader {
+  font-family: var(--secondary-font);
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  justify-content: center;
+  height: 12vh;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.header a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.header a:hover {
+  text-decoration: underline;
+}
+.header__title {
+  font-family: rockybilly;
+}
+.header__language-btn {
+  border: none;
+  background: transparent;
+  color: var(--primary-color);
+}
+.header__cart-btn, .header__theme-btn {
+  padding: 5%;
+  border: none;
+  background: transparent;
+}
+.header__cart-btn i, .header__theme-btn i {
+  color: var(--primary-color);
+  padding: 5%;
+}
+
+.landing-section {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%), url(resources/images/landing-3.webp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  padding: 10%;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.landing-section__details {
+  display: flex;
+  flex: 1 1 50%;
+  flex-flow: column;
+  padding: 2.5%;
+}
+.landing-section__details__title {
+  font-size: 32px;
+}
+.landing-section__details__paragraph {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.landing-section__details__cta-btn {
+  width: 50%;
+  padding: 1em;
+  margin: 1em;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-align: center;
+}
+.landing-section__details__cta-btn:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+.landing-section__img {
+  height: 60vh;
+  padding: 1em;
+}
+.landing-section__img img {
+  height: 100%;
+  aspect-ratio: 1;
+}
+.landing-section__bottom {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.landing-section__bottom__pagination__btn {
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.product-section {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.product-section__filters {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1em;
+}
+.product-section__filters select {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.product-section__filters__btn {
+  padding: 1em;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+}
+.product-section__list {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.product-section__list__item {
+  /* flex: 0 0 33%; */
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 25%;
+  padding: 1em;
+  margin: 1em;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.product-section__list__item__title {
+  padding: 1em 0;
+  font-size: 1em;
+}
+.product-section__list__item__caption {
+  opacity: 75%;
+  font-size: 0.9em;
+}
+.product-section__pagination {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+.product-section__pagination__btn {
+  padding: 1em;
+  border: white 1px solid;
+  background: black;
+  color: var(--primary-color);
+}
+.product-section__pagination__btn--limit {
+  color: grey;
+  opacity: 75%;
+}
+
+.footer {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.footer__content {
+  display: flex;
+  justify-content: center;
+}
+.footer__content__section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 25%;
+  padding: 1em;
+}
+.footer__content__section__navigation {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  list-style: none;
+}
+.footer__content__section__navigation li a {
+  color: var(--primary-color);
+  font-size: 20px;
+  text-decoration: none;
+}
+.footer__content__section__navigation li a:hover {
+  text-decoration: underline;
+}
+.footer__content__section__navigation li a::after {
+  content: "/";
+  color: var(--primary-color);
+}
+
+.product-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column wrap;
+  width: 75%;
+  height: 75%;
+  background: white;
+}
+.product-page__close-btn {
+  width: 10%;
+  height: 10%;
+  background: black;
+  border: none;
+  color: white;
+}
+
+.toast {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  background: red;
+  color: white;
+}
+
+/* Developer: Oswaldo Fabrizio De Los Santos Ascencio 
+    ID: 24232142
+    File name: styles.css
+    Styles for my product pages
+*/
+/* body rules included when showing the example as a live example */
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.card .content {
+  padding: 0.5rem;
+}
+
+.card footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
